@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const links = (
-    <div className="text-[#F0AF0C] font-bold flex">
+    <div className="text-[#1d9e75] font-bold flex">
       <li>
         <Link href="/">Home</Link>
       </li>
@@ -45,8 +45,8 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link href={"/"} className="text-2xl font-bold flex items-center gap-2 text-[#F0AF0C]">
-          <FaShoppingCart className="text-[#F0AF0C]" />
+        <Link href={"/"} className="text-2xl font-bold flex items-center gap-2 text-[#1d9e75]">
+          <FaShoppingCart />
           SummerCart
         </Link>
       </div>

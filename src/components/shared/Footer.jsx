@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* <!-- Brand --> */}
           <div>
-            <Link href={"/"} className="text-2xl font-bold flex items-center gap-2 text-[#F0AF0C]">
-          <FaShoppingCart className="text-[#F0AF0C]" />
+            <Link href={"/"} className="text-2xl font-bold flex items-center gap-2 text-[#1d9e75]">
+          <FaShoppingCart  />
           SummerCart
         </Link>
             <p className="mt-3 text-sm text-gray-400">
@@ -102,7 +102,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="w-full px-3 py-2 rounded-l-lg border border-gray-500 outline-none"
               />
-              <button className="bg-orange-500 px-4 py-2 rounded-r-lg text-white hover:bg-orange-600">
+              <button className="bg-[#1d9e75] px-4 py-2 rounded-r-lg text-white hover:bg-[#056a4a]">
                 Subscribe
               </button>
             </div>
