@@ -13,7 +13,10 @@ import {
 } from "@heroui/react";
 import { Eye } from "lucide-react";
 import { useState } from "react";
+import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
+
 const SingInPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const onSubmit = async (e) => {
@@ -25,7 +28,7 @@ const SingInPage = () => {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/"
+      callbackURL: "/",
     });
     if (data) {
       toast.success("SingIn SuccessFully");
@@ -34,9 +37,22 @@ const SingInPage = () => {
       toast.error(error.message);
     }
   };
+
+  const handleGoogleSingIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <Card className="border mx-auto w-125 py-10 my-30">
-      <h1 className="text-center text-2xl font-bold">Sign In</h1>
+      <div className="text-center space-y-1">
+        <p className="text-4xl mb-5">☀️</p>
+        <h1 className="text-center text-2xl font-bold">Welcome Back</h1>
+        <p className="text-gray-500">
+          Login to your SummerCart account
+        </p>
+      </div>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField
@@ -84,15 +100,47 @@ const SingInPage = () => {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button
+            type="submit"
+            className="bg-[#1d9e75] w-full hover:bg-[#066a4a] transition"
+          >
             <Check />
-            Submit
+            Login
           </Button>
-          <Button type="reset" variant="secondary">
+          <Button type="reset" variant="secondary" className="text-[#1d9e75]">
             Reset
           </Button>
         </div>
       </Form>
+      {/* Divider */}
+      <div className="flex items-center my-4">
+        <div className="grow h-px bg-gray-300"></div>
+        <span className="mx-3 text-sm text-gray-500">or continue with</span>
+        <div className="grow h-px bg-gray-300"></div>
+      </div>
+
+      {/* Google Button */}
+      <button
+        onClick={handleGoogleSingIn}
+        className="w-full flex items-center justify-center gap-3 border border-gray-300 rounded-lg py-2.5 bg-[#1d9e75]  hover:bg-[#066a4a] transition"
+      >
+        {/* Google Icon */}
+        <FcGoogle className="text-xl" />
+        <span className="text-sm font-medium text-white">
+          Sign in with Google
+        </span>
+      </button>
+
+      {/* Register Link */}
+      <p className="text-center text-sm text-gray-500 mt-5">
+        Don’t have an account?{" "}
+        <a
+          href="/singup"
+          className="text-green-600 font-medium hover:underline"
+        >
+          Register here
+        </a>
+      </p>
     </Card>
   );
 };

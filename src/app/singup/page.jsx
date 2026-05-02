@@ -12,8 +12,9 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 const singUpPage = () => {
@@ -21,32 +22,45 @@ const singUpPage = () => {
   const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
-    
+
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const {data, error} = await authClient.signUp.email({
-        name,
-        image,
-        email,
-        password
-    })
-    if(data){
-        toast.success("SingUp SuccessFully")
+    const { data, error } = await authClient.signUp.email({
+      name,
+      image,
+      email,
+      password,
+    });
+    if (data) {
+      toast.success("SingUp SuccessFully");
     }
-    if(!error){
-        toast.error( router.push('/') )
+    if (!error) {
+      toast.error(router.push("/"));
     }
-   };
+  };
+
+  const handleGoogleSingIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
-    <Card className="border mx-auto w-125 py-10 my-10">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+    <Card className="border mx-auto w-125 py-5 my-10">
+      <div className="text-center space-y-1">
+        <p className="text-4xl mb-5">🌊</p>
+        <h1 className="text-center text-2xl font-bold">Create Account</h1>
+        <p className="text-gray-500">
+          Join SummerCart today — it&lsquo;s free!
+        </p>
+      </div>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
-          <Label>Name</Label>
+          <Label>Full Name</Label>
           <Input placeholder="Enter your name" />
           <FieldError />
         </TextField>
@@ -102,15 +116,47 @@ const singUpPage = () => {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button
+            type="submit"
+            className="bg-[#1d9e75] w-full hover:bg-[#066a4a] transition"
+          >
             <Check />
-            Submit
+            Create Account
           </Button>
-          <Button type="reset" variant="secondary">
+          <Button type="reset" variant="secondary" className=" text-[#1d9e75]">
             Reset
           </Button>
         </div>
       </Form>
+      {/* Divider */}
+      <div className="flex items-center my-4">
+        <div className="grow h-px bg-gray-300"></div>
+        <span className="mx-3 text-sm text-gray-500">or continue with</span>
+        <div className="grow h-px bg-gray-300"></div>
+      </div>
+
+      {/* Google Button */}
+      <button
+        onClick={handleGoogleSingIn}
+        className="w-full flex items-center justify-center gap-3 border border-gray-300 rounded-lg py-2.5 bg-[#1d9e75]  hover:bg-[#066a4a] transition"
+      >
+        {/* Google Icon */}
+        <FcGoogle className="text-xl" />
+        <span className="text-sm font-medium text-white">
+          Sign in with Google
+        </span>
+      </button>
+
+      {/* Login Link */}
+      <p className="text-center text-sm text-gray-500 mt-5">
+        Already have an account?
+        <a
+          href="/singin"
+          className="text-green-600 font-medium hover:underline"
+        >
+          Login here
+        </a>
+      </p>
     </Card>
   );
 };

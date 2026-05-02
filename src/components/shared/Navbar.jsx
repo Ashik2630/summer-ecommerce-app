@@ -56,12 +56,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div>
-          <ul className="flex items-center gap-5">
+          <ul className="flex items-center gap-2">
               <li>
-                <Link href={"/singup"}>SingUp</Link>
+                <Link className="btn bg-[#105d39] text-white" href={"/singup"}>SingUp</Link>
               </li>
               <li>
-                <Link href={"/singin"}>SingIn</Link>
+                <Link className="btn bg-[#105d39] text-white" href={"/singin"}>SingIn</Link>
               </li>
           </ul>
         </div>
