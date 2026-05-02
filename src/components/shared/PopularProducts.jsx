@@ -9,7 +9,7 @@ const PopularProducts = async() => {
     return (
         <div className='container mx-auto   mb-50'>
            <h2 className='text-2xl font-bold my-10'> PopularProducts</h2>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid md:grid-cols-4 gap-5'>
                 {
                     popularProducts.map(product => 
                         <PopularProduct key={product.id} product={product}/>
