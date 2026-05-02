@@ -6,7 +6,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 const PopularProducts = async() => {
     const res = await fetch('https://summer-ecommerce-app.vercel.app/productsData.json');
     const products = await res.json();
-    const popularProducts = products.slice(0, 4);
+    const popularProducts = products.slice(0, 8);
     
     return (
         <div className='container mx-auto   mb-50'>
