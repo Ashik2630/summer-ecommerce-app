@@ -86,5 +86,93 @@
     "description": "Keeps your drinks cold for hours during hot summer days.",
     "image": "https://i.ibb.co.com/B5QWJgBk/82145fb26fd6-Solar-Circuit-lifestyle.webp",
     "category": "Essentials"
+  },
+  {
+    "id": 10,
+    "name": "Portable Mini Neck Fan",
+    "brand": "CoolBreeze",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 25,
+    "category": "Gadgets",
+    "description": "Hands-free rechargeable neck fan for outdoor summer comfort.",
+    "image": "https://images.unsplash.com/photo-1599058917765-a780eda07a3e"
+  },
+  {
+    "id": 11,
+    "name": "Insulated Water Bottle (1L)",
+    "brand": "HydroMax",
+    "price": 20,
+    "rating": 4.9,
+    "stock": 30,
+    "category": "Lifestyle",
+    "description": "Keeps drinks cold for up to 24 hours, perfect for summer trips.",
+    "image": "https://images.unsplash.com/photo-1526406915894-7bcd65f60845"
+  },
+  {
+    "id": 12,
+    "name": "Beach Straw Hat",
+    "brand": "SunnyStyle",
+    "price": 14,
+    "rating": 4.4,
+    "stock": 18,
+    "category": "Accessories",
+    "description": "Wide-brim straw hat for sun protection and style.",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+  },
+  {
+    "id": 12,
+    "name": "Cooling Gel Eye Mask",
+    "brand": "RelaxPro",
+    "price": 9,
+    "rating": 4.3,
+    "stock": 40,
+    "category": "Health",
+    "description": "Soothing cooling mask to relieve heat and eye fatigue.",
+    "image": "https://images.unsplash.com/photo-1588776814546-ec7e77d63f6c"
+  },
+  {
+    "id": 13,
+    "name": "Foldable Picnic Mat",
+    "brand": "OutdoorEase",
+    "price": 22,
+    "rating": 4.7,
+    "stock": 15,
+    "category": "Outdoor",
+    "description": "Waterproof foldable mat ideal for beach and park outings.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+  },
+  {
+    "id": 14,
+    "name": "Aloe Vera Sunscreen SPF 50",
+    "brand": "NatureGlow",
+    "price": 11,
+    "rating": 4.8,
+    "stock": 35,
+    "category": "Skincare",
+    "description": "Lightweight sunscreen with aloe vera for hydration and protection.",
+    "image": "https://images.unsplash.com/photo-1596464716127-f2a82984de30"
+  },
+  {
+    "id": 15,
+    "name": "Men's Summer Linen Shirt",
+    "brand": "AirWear",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 22,
+    "category": "Clothing",
+    "description": "Breathable linen shirt designed for hot and humid weather.",
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf"
+  },
+  {
+    "id": 16,
+    "name": "Slip-On Canvas Sneakers",
+    "brand": "WalkEasy",
+    "price": 26,
+    "rating": 4.6,
+    "stock": 19,
+    "category": "Footwear",
+    "description": "Lightweight and comfortable sneakers perfect for daily summer use.",
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77"
   }
 ]
