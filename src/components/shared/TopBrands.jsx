@@ -2,31 +2,63 @@
 
 const TopBrands = () => {
   const brands = [
-    {
-      short: "SS",
-      name: "SunShade",
-      category: "Eyewear",
-      color: "bg-green-100 text-green-700",
-    },
-    {
-      short: "GS",
-      name: "GlowShield",
-      category: "Skincare",
-      color: "bg-red-100 text-red-700",
-    },
-    {
-      short: "SM",
-      name: "ShadeMax",
-      category: "Beach Gear",
-      color: "bg-yellow-100 text-yellow-700",
-    },
-    {
-      short: "AQ",
-      name: "AquaCool",
-      category: "Hydration",
-      color: "bg-blue-100 text-blue-700",
-    },
-  ];
+  {
+    short: "AM",
+    name: "Amazon",
+    category: "Global E-commerce",
+    color: "bg-yellow-100 text-yellow-700",
+    logo: "🛒"
+  },
+  {
+    short: "AP",
+    name: "Apple",
+    category: "Premium Technology",
+    color: "bg-gray-100 text-gray-800",
+    logo: "🍏"
+  },
+  {
+    short: "MS",
+    name: "Microsoft",
+    category: "Cloud & Software",
+    color: "bg-blue-100 text-blue-700",
+    logo: "🪟"
+  },
+  {
+    short: "GO",
+    name: "Google",
+    category: "AI & Search Ecosystem",
+    color: "bg-red-100 text-red-700",
+    logo: "🔍"
+  },
+  {
+    short: "NI",
+    name: "Nike",
+    category: "Sportswear & Lifestyle",
+    color: "bg-black text-white",
+    logo: "👟"
+  },
+  {
+    short: "AD",
+    name: "Adidas",
+    category: "Athletic Apparel",
+    color: "bg-blue-50 text-blue-800",
+    logo: "⚡"
+  },
+  {
+    short: "SH",
+    name: "Shopify",
+    category: "E-commerce Platform",
+    color: "bg-green-100 text-green-700",
+    logo: "🛍️"
+  },
+  {
+    short: "TS",
+    name: "Tesla",
+    category: "Smart Mobility & Energy",
+    color: "bg-red-50 text-red-700",
+    logo: "🚗"
+  }
+];
   return (
     <div>
       <section className="py-12 px-6 bg-linear-to-r from-gray-50 to-gray-100">
