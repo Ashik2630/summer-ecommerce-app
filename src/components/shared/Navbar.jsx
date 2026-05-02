@@ -1,18 +1,19 @@
 import Link from "next/link";
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const links = (
     <div className="text-[#1d9e75] font-bold flex">
       <li>
-        <Link href="/">Home</Link>
+        <NavLink href="/">Home</NavLink>
       </li>
       <li>
-        <Link href="/products">Products</Link>
+        <NavLink href="/products">Products</NavLink>
       </li>
       <li>
-        <Link href="/my-profile">My Profile</Link>
+        <NavLink href="/my-profile">My Profile</NavLink>
       </li>
     </div>
   );
