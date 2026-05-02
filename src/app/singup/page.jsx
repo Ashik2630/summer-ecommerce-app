@@ -34,11 +34,15 @@ const singUpPage = () => {
       email,
       password,
     });
-    if (data) {
-      toast.success("SingUp SuccessFully");
+    if (error) {
+      toast.error(error.message);
+      return;
     }
-    if (!error) {
-      toast.error(router.push("/"));
+
+    if (data) {
+      toast.success("SignUp successful");
+      router.push("/");
+      router.refresh(); 
     }
   };
 

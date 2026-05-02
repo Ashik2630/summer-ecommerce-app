@@ -46,7 +46,8 @@ const UpdateInfoPage = () => {
               <Image
                 src={preview}
                 alt="preview"
-                fill
+                width={50}
+                height={50}
                 className="rounded-full object-cover shadow-md border-4 border-green-100"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
