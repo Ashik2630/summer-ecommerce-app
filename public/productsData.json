@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.ibb.co.com/ztQKW3t/XO-E9-UV-Protective-Smart-Sunglasses-1.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Lightweight Summer Jacket",
+    "brand": "AirFlex",
+    "price": 28,
+    "rating": 4.5,
+    "stock": 12,
+    "description": "Breathable lightweight jacket perfect for cool summer evenings.",
+    "image": "https://i.ibb.co.com/fGPSB4tJ/19f90325df24f70cc1ecdbea6289584e2e2b3749-original.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Thin Cotton Hoodie",
+    "brand": "BreezeWear",
+    "price": 22,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Soft and thin hoodie designed for summer comfort.",
+    "image": "https://i.ibb.co.com/ynWSxBmZ/20250930-2240-Maroon-Hoodie-remix-01k6dqvprafczr2xdz65bwkcx3.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Men's Summer T-Shirt",
+    "brand": "BreezeFit",
+    "price": 18,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Comfortable cotton t-shirt designed for hot weather.",
+    "image": "https://i.ibb.co.com/tp6C1PFc/image.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Beach Slippers",
+    "brand": "WaveWalk",
+    "price": 9,
+    "rating": 4.3,
+    "stock": 30,
+    "description": "Comfortable and durable slippers for beach and home use.",
+    "image": "https://i.ibb.co.com/rRZwLGFT/pair-stylish-flipflops-on-concrete-600nw-2626181927.webp",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Rechargeable mini fan to keep you cool anywhere.",
+    "image": "https://i.ibb.co.com/PZ8k7s4F/b7fe649c7750fb9b6518cae8aaa3d37b.jpg",
+    "category": "Gadgets"
+  },
+  {
+    "id": 7,
+    "name": "Swimming Goggles",
+    "brand": "AquaPro",
+    "price": 11,
+    "rating": 4.5,
+    "stock": 14,
+    "description": "Anti-fog swimming goggles for clear underwater vision.",
+    "image": "https://i.ibb.co.com/rGjWY7j8/716m-BZR0w-AL.jpg",
+    "category": "Sports"
+  },
+  {
+    "id": 8,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroCool",
+    "price": 16,
+    "rating": 4.7,
+    "stock": 22,
+    "description": "Keeps your drinks cold for hours during hot summer days.",
+    "image": "https://i.ibb.co.com/B5QWJgBk/82145fb26fd6-Solar-Circuit-lifestyle.webp",
+    "category": "Essentials"
+  }
+]
