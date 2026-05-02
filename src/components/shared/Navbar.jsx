@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import NavLink from "./NavLink";
+import { authClient, useSession } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
+
 
 const Navbar = () => {
   const links = (
@@ -17,6 +21,13 @@ const Navbar = () => {
       </li>
     </div>
   );
+  const userData = useSession();
+  const user = userData.data?.user;
+  
+  const handleSingOut = async() => {
+    await authClient.signOut();
+      window.location.href = "/"; 
+  }
 
   return (
     <div className="navbar bg-base-100 shadow-sm px-10">
@@ -46,7 +57,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link href={"/"} className="text-2xl font-bold flex items-center gap-2 text-[#1d9e75]">
+        <Link
+          href={"/"}
+          className="text-2xl font-bold flex items-center gap-2 text-[#1d9e75]"
+        >
           <FaShoppingCart />
           SummerCart
         </Link>
@@ -56,14 +70,33 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div>
-          <ul className="flex items-center gap-2">
+          {!user && (
+            <ul className="flex items-center gap-2">
               <li>
-                <Link className="btn bg-[#105d39] text-white" href={"/singup"}>SingUp</Link>
+                <Link className="btn bg-[#105d39] text-white" href={"/singup"}>
+                  SingUp
+                </Link>
               </li>
               <li>
-                <Link className="btn bg-[#105d39] text-white" href={"/singin"}>SingIn</Link>
+                <Link className="btn bg-[#105d39] text-white" href={"/singin"}>
+                  SingIn
+                </Link>
               </li>
-          </ul>
+            </ul>
+          )}
+          {user && (
+            <div className="flex items-center gap-3">
+              <Avatar>
+                <Avatar.Image
+                  alt={user.name}
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
+              <Button onClick={handleSingOut} variant="danger" >SingOut</Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
