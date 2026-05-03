@@ -5,11 +5,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import NavLink from "./NavLink";
 import { authClient, useSession } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
-
+import { ClipLoader } from "react-spinners";
+import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const links = (
-    <div className="text-[#1d9e75] font-bold flex">
+    <>
       <li>
         <NavLink href="/">Home</NavLink>
       </li>
@@ -19,18 +20,19 @@ const Navbar = () => {
       <li>
         <NavLink href="/my-profile">My Profile</NavLink>
       </li>
-    </div>
+    </>
   );
-  const userData = useSession();
+  const userData = authClient.useSession();
+  console.log(userData);
   const user = userData.data?.user;
-  
-  const handleSingOut = async() => {
+
+  const handleSingOut = async () => {
     await authClient.signOut();
-      window.location.href = "/"; 
-  }
+    window.location.href = "/";
+  };
 
   return (
-    <div className="navbar bg-base-100 shadow-sm px-10">
+    <div className="navbar bg-base-100 shadow-sm md:px-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,7 +54,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[#1d9e75] font-bold flex"
           >
             {links}
           </ul>
@@ -66,29 +68,31 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 text-[#1d9e75] font-bold flex">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end">
         <div>
           {!user && (
-            <ul className="flex items-center gap-2">
+            <ul className="flex items-center gap-2 ">
               <li>
                 <Button variant="outline" className="">
-                  <Link href={"/singup"}>
-                  Register
-                </Link>
+                  <Link href={"/singup"}>Register</Link>
                 </Button>
               </li>
               <li>
                 <Button className="bg-[#1d9e75] text-white px-6">
-                  <Link  href={"/singin"}>
-                  Login
-                </Link>
+                  <Link href={"/singin"}>Login</Link>
                 </Button>
               </li>
             </ul>
           )}
-          {user && (
+          {userData.isPending ? (
+            <div className="flex justify-center items-center mb-10 ">
+              <ClipLoader className="text-xs"/>
+            </div>
+          ) : user ? (
             <div className="flex items-center gap-3">
               <Avatar>
                 <Avatar.Image
@@ -98,9 +102,15 @@ const Navbar = () => {
                 />
                 <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
               </Avatar>
-              <Button onClick={handleSingOut} className="bg-[#1d9e75] text-white" >SingOut</Button>
+
+              <Button
+                onClick={handleSingOut}
+                className="bg-[#1d9e75] text-white"
+              >
+                SingOut
+              </Button>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </div>
