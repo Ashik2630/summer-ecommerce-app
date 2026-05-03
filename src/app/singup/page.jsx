@@ -53,7 +53,8 @@ const SingUpPage = () => {
   };
 
   return (
-    <Card className="border mx-auto w-125 py-5 my-10">
+    <Card className="border mx-auto w-125 py-5 my-10 rounded hover: translate-0 scale-1.5">
+
       <div className="text-center space-y-1">
         <p className="text-4xl mb-5">🌊</p>
         <h1 className="text-center text-2xl font-bold">Create Account</h1>
@@ -61,6 +62,7 @@ const SingUpPage = () => {
           Join SummerCart today — it&lsquo;s free!
         </p>
       </div>
+
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
