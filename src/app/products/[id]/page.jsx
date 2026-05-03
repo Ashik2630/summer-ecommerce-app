@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "SummerCart || ProductDetails-Page",
+  title: "SummerCart || Product-Details-Page",
 };
 import BackButton from "@/components/shared/BackButton";
 import { Button, Chip } from "@heroui/react";

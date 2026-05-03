@@ -54,7 +54,7 @@ const SingUpPage = () => {
   };
 
   return (
-    <Card className="border mx-auto w-125 py-5 my-10 rounded hover: translate-0 scale-1.5">
+    <Card className=" mx-5 md:mx-auto md:w-125 py-5 my-10 rounded hover: translate-0 scale-1.5">
       <div className="text-center space-y-1">
         <p className="text-4xl mb-5">🌊</p>
         <h1 className="text-center text-2xl font-bold">Create Account</h1>

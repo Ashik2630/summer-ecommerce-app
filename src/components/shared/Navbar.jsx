@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
         <Link
           href={"/"}
-          className="text-2xl font-bold flex items-center gap-2 text-[#1d9e75]"
+          className=" md:text-2xl font-bold flex items-center gap-1 md:gap-2 text-[#1d9e75]"
         >
           <FaShoppingCart />
           SummerCart
@@ -76,7 +76,7 @@ const Navbar = () => {
           {!user && (
             <ul className="flex items-center gap-2 ">
               <li>
-                <Button variant="outline" className="">
+                <Button variant="outline"  className="">
                   <Link href={"/singup"}>Register</Link>
                 </Button>
               </li>
