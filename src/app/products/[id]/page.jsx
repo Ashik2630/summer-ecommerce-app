@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "SummerCart || ProductDetails-Page",
+};
 import BackButton from "@/components/shared/BackButton";
 import { Button, Chip } from "@heroui/react";
 import Image from "next/image";

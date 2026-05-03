@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "SummerCart || ProductsPage",
+};
+
 import Category from "@/components/shared/Category";
 import PopularProduct from "@/components/shared/PopularProduct";
 import React from "react";

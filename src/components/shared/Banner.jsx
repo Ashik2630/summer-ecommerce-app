@@ -1,8 +1,9 @@
+import { manrope } from "@/app/layout";
 
 
 const Banner = () => {
   return (
-    <div>
+    <div className={`${manrope.className}`}>
       <section className="w-full bg-linear-to-r from-[#61b097] via-[#419f81] to-[#1d9e75] text-white py-40 px-6  shadow-lg">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-4">

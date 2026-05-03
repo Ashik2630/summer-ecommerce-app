@@ -1,3 +1,4 @@
+import { roboto } from "@/app/layout";
 import {
   Sun,
   Droplets,
@@ -47,8 +48,10 @@ const SummerCareSection = () => {
     },
   ];
 
+
+
   return (
-    <div>
+    <div className={`${roboto.className}`}>
       <section className="py-12 px-6 bg-linear-to-br from-[#f0fdf4] to-[#ecfeff]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">
