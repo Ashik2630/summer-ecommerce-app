@@ -73,14 +73,18 @@ const Navbar = () => {
           {!user && (
             <ul className="flex items-center gap-2">
               <li>
-                <Link className="btn bg-[#105d39] text-white" href={"/singup"}>
-                  SingUp
+                <Button variant="outline" className="">
+                  <Link href={"/singup"}>
+                  Register
                 </Link>
+                </Button>
               </li>
               <li>
-                <Link className="btn bg-[#105d39] text-white" href={"/singin"}>
-                  SingIn
+                <Button className="bg-[#1d9e75] text-white px-6">
+                  <Link  href={"/singin"}>
+                  Login
                 </Link>
+                </Button>
               </li>
             </ul>
           )}
@@ -94,7 +98,7 @@ const Navbar = () => {
                 />
                 <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
               </Avatar>
-              <Button onClick={handleSingOut} variant="danger" >SingOut</Button>
+              <Button onClick={handleSingOut} className="bg-[#1d9e75] text-white" >SingOut</Button>
             </div>
           )}
         </div>
