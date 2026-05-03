@@ -102,7 +102,7 @@ const SingInPage = () => {
                 size="sm"
                 variant="ghost"
                 onPress={() => setIsVisible(!isVisible)}
-                className=" absolute right-17"
+                className=" absolute right-12 md:right-17"
               >
                 {isVisible ? (
                   <Eye className="size-4" />
