@@ -8,7 +8,7 @@ const ProductsPage = async() => {
     return (
         <div className='container mx-auto my-10'>
             <h1 className='text-2xl font-bold mb-5 text-[#1d9e75]'>ALL Products</h1>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid md:grid-cols-4 gap-5 mx-5 md:mx-0'>
                 {
                     products.map(product => <PopularProduct key={product.id} product={product}/>)
                 }

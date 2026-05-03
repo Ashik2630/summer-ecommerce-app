@@ -11,10 +11,10 @@ const PopularProducts = async() => {
     return (
         <div className='container mx-auto   mb-50'>
            <div className='flex justify-between text-[#1d9e75]'>
-            <h2 className='text-2xl font-bold my-10'> PopularProducts</h2>
-            <Link className='flex items-center gap-2' href={`/products`}>View All <FaArrowRightLong /></Link>
+            <h2 className='text-2xl font-bold my-10 mx-5 md:mx-0'> PopularProducts</h2>
+            <Link className='flex items-center gap-2 mx-5 md:mx-0' href={`/products`}>View All <FaArrowRightLong /></Link>
            </div>
-            <div className='grid md:grid-cols-4 gap-5'>
+            <div className='grid md:grid-cols-4 gap-5 mx-5 md:mx-0'>
                 {
                     popularProducts.map(product => 
                         <PopularProduct key={product.id} product={product}/>
