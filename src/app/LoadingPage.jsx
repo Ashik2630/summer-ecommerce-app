@@ -3,7 +3,7 @@ import { HashLoader } from 'react-spinners';
 
 const LoadingPage = () => {
     return (
-        <div className='flex h-[85vh] items-center justify-center'>
+        <div className='flex h-[50vh] items-center justify-center'>
             <span>Global Loading...</span>
             <HashLoader />
             

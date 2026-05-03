@@ -89,7 +89,7 @@ const Navbar = () => {
           )}
           {userData.isPending ? (
             <div className="flex justify-center items-center mb-10 ">
-              <ClipLoader className="text-xs"/>
+              <ClipLoader size="5xl" className="text-xs "/>
             </div>
           ) : user ? (
             <div className="flex items-center gap-3">
