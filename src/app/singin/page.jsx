@@ -8,9 +8,11 @@ import {
   FieldError,
   Form,
   Input,
+  InputGroup,
   Label,
   TextField,
 } from "@heroui/react";
+import { Eye } from "lucide-react";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
@@ -47,9 +49,7 @@ const SingInPage = () => {
       <div className="text-center space-y-1">
         <p className="text-4xl mb-5">☀️</p>
         <h1 className="text-center text-2xl font-bold">Welcome Back</h1>
-        <p className="text-gray-500">
-          Login to your SummerCart account
-        </p>
+        <p className="text-gray-500">Login to your SummerCart account</p>
       </div>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
@@ -61,7 +61,6 @@ const SingInPage = () => {
             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
               return "Please enter a valid email address";
             }
-
             return null;
           }}
         >
@@ -90,7 +89,29 @@ const SingInPage = () => {
           }}
         >
           <Label>Password</Label>
-          <Input placeholder="Enter your password" />
+          <InputGroup>
+            <InputGroup.Input
+              className="w-full max-w-70 relative"
+              placeholder="Enter your Email"
+              type={isVisible ? "text" : "password"}
+            />
+            <InputGroup.Suffix className="pr-0">
+              <Button
+                isIconOnly
+                aria-label={isVisible ? "Hide password" : "Show password"}
+                size="sm"
+                variant="ghost"
+                onPress={() => setIsVisible(!isVisible)}
+                className=" absolute right-17"
+              >
+                {isVisible ? (
+                  <Eye className="size-4" />
+                ) : (
+                  <EyeSlash className="size-4" />
+                )}
+              </Button>
+            </InputGroup.Suffix>
+          </InputGroup>
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>

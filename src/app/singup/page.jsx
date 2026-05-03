@@ -4,6 +4,7 @@ import { Check, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Card,
+  Description,
   FieldError,
   Form,
   Input,
@@ -12,7 +13,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { Eye } from "lucide-react";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
@@ -54,7 +55,6 @@ const SingUpPage = () => {
 
   return (
     <Card className="border mx-auto w-125 py-5 my-10 rounded hover: translate-0 scale-1.5">
-
       <div className="text-center space-y-1">
         <p className="text-4xl mb-5">🌊</p>
         <h1 className="text-center text-2xl font-bold">Create Account</h1>
@@ -62,7 +62,6 @@ const SingUpPage = () => {
           Join SummerCart today — it&lsquo;s free!
         </p>
       </div>
-
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -94,6 +93,7 @@ const SingUpPage = () => {
           <FieldError />
         </TextField>
 
+        {/* password */}
         <TextField
           isRequired
           minLength={8}
@@ -116,7 +116,8 @@ const SingUpPage = () => {
           <Label>Password</Label>
           <InputGroup>
             <InputGroup.Input
-              className="w-full max-w-70"
+              className="w-full max-w-70 relative"
+              placeholder="Enter your Email"
               type={isVisible ? "text" : "password"}
             />
             <InputGroup.Suffix className="pr-0">
@@ -126,6 +127,7 @@ const SingUpPage = () => {
                 size="sm"
                 variant="ghost"
                 onPress={() => setIsVisible(!isVisible)}
+                className=" absolute right-17"
               >
                 {isVisible ? (
                   <Eye className="size-4" />
@@ -135,6 +137,10 @@ const SingUpPage = () => {
               </Button>
             </InputGroup.Suffix>
           </InputGroup>
+          <Description>
+            Must be at least 8 characters with 1 uppercase and 1 number
+          </Description>
+          <FieldError />
         </TextField>
 
         <div className="flex gap-2">
