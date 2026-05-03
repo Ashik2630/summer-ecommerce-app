@@ -15,7 +15,6 @@ const ProductsPage = async ({ searchParams }) => {
         (product) => product.category.toLowerCase() == category.toLowerCase(),
       )
     : products;
-
   return (
     <div className="container mx-auto my-10">
       <h1 className="text-2xl font-bold mb-5 text-[#1d9e75] mx-5 md:mx-0">

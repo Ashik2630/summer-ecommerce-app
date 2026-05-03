@@ -1,10 +1,11 @@
-import Lottie from "lottie-react";
-import loadingAnim from "../../assets/loading.json";
+import React from "react";
+import { HashLoader } from "react-spinners";
 
 const LoadingPage = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <Lottie animationData={loadingAnim} />
+    <div className="flex h-[85vh] items-center justify-center">
+      <span>Products Loading...</span>
+      <HashLoader />
     </div>
   );
 };

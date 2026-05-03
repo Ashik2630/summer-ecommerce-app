@@ -22,5 +22,21 @@
   {
     "id": 6,
     "category": "Essentials"
+  },
+  {
+    "id": 7,
+    "category": "Lifestyle"
+  },
+  {
+    "id": 8,
+    "category": "Health"
+  },
+  {
+    "id": 9,
+    "category": "Outdoor"
+  },
+  {
+    "id": 10,
+    "category": "Skincare"
   }
 ]

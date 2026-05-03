@@ -23,7 +23,6 @@ const Navbar = () => {
     </>
   );
   const userData = authClient.useSession();
-  console.log(userData);
   const user = userData.data?.user;
 
   const handleSingOut = async () => {
