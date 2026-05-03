@@ -1,23 +1,23 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Card,
-  Description,
   FieldError,
   Form,
   Input,
+  InputGroup,
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/navigation";
+import { Eye } from "lucide-react";
+import { useRouter } from "next/navigation"; 
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
-const singUpPage = () => {
+const SingUpPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const router = useRouter();
   const onSubmit = async (e) => {
@@ -42,7 +42,7 @@ const singUpPage = () => {
     if (data) {
       toast.success("SignUp successful");
       router.push("/");
-      router.refresh(); 
+      router.refresh();
     }
   };
 
@@ -112,11 +112,27 @@ const singUpPage = () => {
           }}
         >
           <Label>Password</Label>
-          <Input placeholder="Enter your password" />
-          <Description>
-            Must be at least 8 characters with 1 uppercase and 1 number
-          </Description>
-          <FieldError />
+          <InputGroup>
+            <InputGroup.Input
+              className="w-full max-w-70"
+              type={isVisible ? "text" : "password"}
+            />
+            <InputGroup.Suffix className="pr-0">
+              <Button
+                isIconOnly
+                aria-label={isVisible ? "Hide password" : "Show password"}
+                size="sm"
+                variant="ghost"
+                onPress={() => setIsVisible(!isVisible)}
+              >
+                {isVisible ? (
+                  <Eye className="size-4" />
+                ) : (
+                  <EyeSlash className="size-4" />
+                )}
+              </Button>
+            </InputGroup.Suffix>
+          </InputGroup>
         </TextField>
 
         <div className="flex gap-2">
@@ -165,4 +181,4 @@ const singUpPage = () => {
   );
 };
 
-export default singUpPage;
+export default SingUpPage;

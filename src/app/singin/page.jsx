@@ -11,9 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { Eye } from "lucide-react";
 import { useState } from "react";
-import { FaGoogle } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
